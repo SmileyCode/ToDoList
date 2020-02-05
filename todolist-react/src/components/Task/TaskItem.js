@@ -21,9 +21,9 @@ class TaskItem extends Component {
                                     <p className="card-text text-truncate ">
                                         {task.description}
                                     </p>
-                                    <a href="#" className="btn btn-primary">
+                                    <Link to={`/updatetask/${task.id}`} className="btn btn-primary">
                                         View / Update
-                                    </a>
+                                    </Link>
         
                                     <button className="btn btn-danger ml-4" onClick={this.onDeleteClick.bind(this,task.id)}>
                                         Delete

@@ -4,5 +4,5 @@ import taskReducer from "./taskReducer"
 
 export default combineReducers ({
     errors: errorsReducer,
-    tasks: taskReducer
+    task: taskReducer
 })

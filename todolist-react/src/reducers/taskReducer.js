@@ -1,7 +1,8 @@
-import {GET_TASKS, DELETE_TASK} from "../actions/types";
+import {GET_TASKS, GET_TASK, DELETE_TASK} from "../actions/types";
 
 const initalState = {
-    tasks: []
+    tasks: [],
+    task: {}
 }
 export default function(state=initalState, action){
     switch(action.type){
@@ -9,6 +10,12 @@ export default function(state=initalState, action){
             return{
                 ...state,
                 tasks: action.payload
+            };
+
+        case GET_TASK:
+            return{
+                ...state,
+                task: action.payload
             };
 
         case DELETE_TASK:
