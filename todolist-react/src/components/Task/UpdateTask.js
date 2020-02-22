@@ -40,7 +40,7 @@ class UpdateTask extends Component {
 
     componentDidMount(){
         const {task_id} = this.props.match.params;
-        this.props.getTask(task_id);
+        this.props.getTask(task_id, this.props.history);
     }
     onChange(e){
         this.setState({ [e.target.name]:e.target.value });
@@ -66,7 +66,7 @@ class UpdateTask extends Component {
                         <Link to="/" className="btn btn-light">
                             Back to Board
                         </Link>
-                        <h4 className="display-4 text-center">Add task</h4>
+                        <h4 className="display-4 text-center">Update task</h4>
                         <form onSubmit = {this.onSubmit}>
                             <div className="form-group">
                                 <input type="text" 
